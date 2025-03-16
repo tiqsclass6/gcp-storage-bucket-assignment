@@ -22,8 +22,6 @@ Before you begin, ensure you have the following installed:
 │   ├── coffee.jpg          # Sample image file
 │   ├── index.html          # HTML file referencing images
 ├── main.tf                 # Terraform configuration file
-├── variables.tf            # Defines Terraform variables
-├── outputs.tf              # Stores Terraform output values
 ├── README.md               # Documentation (this file)
 ```
 
