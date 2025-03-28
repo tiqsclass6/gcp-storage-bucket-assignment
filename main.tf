@@ -8,10 +8,10 @@ terraform {
 }
 
 provider "google" {
-  region      = "us-central1"
-  project     = "tiqs-class6-5-salsa-saturday"
+  region      = "CHANGE-YOUR-REGION-HERE" # Change your default region; resources will specify their own region
+  project     = "<PROJECT_ID_HERE>" #Insert your Project ID here
   zone        = "us-central1-b"
-  credentials = file("./tiqs-class6-5-salsa-saturday-d7aeed308353.json")
+  credentials = "<path/to/service-account.json>" # Insert your json credential here
 }
 
 resource "google_storage_bucket" "bucket1" {
@@ -30,7 +30,7 @@ resource "google_compute_subnetwork" "sub-sg" {
   name          = "sub-sg"
   network       = google_compute_network.auto-vpc-tf.id
   ip_cidr_range = "10.231.1.0/24"
-  region        = "us-west1"
+  region        = "us-central1"
 }
 
 resource "google_storage_bucket_object" "beach_image" {
